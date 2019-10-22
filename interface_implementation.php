@@ -20,30 +20,32 @@ class Book implements Library
 
     public function getBookById(int $id)
     {
-      return $this->id;
+      return Book::where('id','=', $id)->first();
     }
 
     public function getBooksByAuthor(string $author)
     {
-      return $this->author;
+      return Book::where('author','LIKE', '%'.$author.'%')->get();
     }
 
     public function getBooksByName(string $name)
     {
-      return $this->name;
+      return Book::where('name','LIKE', '%'.$name.'%')->get();
     }
 
     public function getBooksByYear(int $year)
     {
-      return $this->year;
+      return Book::where('year','LIKE', '%'.$year.'%')->get();
     }
 
     public function getBooksByManufacture(string $manufacture)
     {
-      return $this->manufacture;
+      return Book::where('manufacture','LIKE', '%'.$manufacture.'%')->get();
     }
 
 }
+
+//main.php
 
 $favorite_books = array(
   new Book (1, "Dostoevskiy", "Idiot", 2019, "Almaty Kitap"),
