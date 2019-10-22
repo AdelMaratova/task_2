@@ -4,11 +4,11 @@ require_once "LibraryInterface.php";
 
 class Book implements Library
 {
-    private $id;
-    private $author;
-    private $name;
-    private $year;
-    private $manufacture;
+    public $id;
+    public $author;
+    public $name;
+    public $year;
+    public $manufacture;
 
     public function __construct( $id, $author, $name, $year, $manufacture) {
       $this->id = $id;
