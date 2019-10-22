@@ -44,3 +44,15 @@ class Book implements Library
     }
 
 }
+
+$favorite_books = array(
+  new Book (1, "Dostoevskiy", "Idiot", 2019, "Almaty Kitap"),
+  new Book (2, "Shekspir, "R&D", 2019, "Nursultan Kitap")
+);
+
+echo "My favorite books:<br>";
+foreach($favorite_books as $favorite_book) {
+    echo ' - ' . $favorite_book '<br>';
+};
+
+?>
